@@ -1,0 +1,356 @@
+/* 1. RESET & VARIABLES */
+:root {
+    --primary-color: #2563eb; 
+    --secondary-color: #1e40af;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --bg-light: #f3f4f6;
+    --white: #ffffff;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+    
+    /*calculates the offset automatically.*/
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+/* 3. NAVIGATION */
+.navbar {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.logo span { color: var(--primary-color); }
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.nav-links a:hover { color: var(--primary-color); }
+
+.menu-toggle { display: none; } /* Hidden on desktop */
+
+/* 4. HERO SECTION */
+.hero {
+    background: linear-gradient(rgba(37, 99, 235, 0.9), rgba(30, 64, 175, 0.9)),
+    url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content {
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero .btn {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+.hero .btn:hover {
+    background-color: var(--bg-light);
+}
+
+/* 5. EVENTS SECTION */
+.events-section {
+    padding: 4rem 0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.search-wrapper input {
+    padding: 12px 20px;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    font-family: inherit;
+    outline: none;
+    transition: var(--transition);
+}
+
+.search-wrapper input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* 6. EVENTS GRID (Responsive Magic) */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.event-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    position: relative;
+    height: 200px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.event-details {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.event-details p {
+    margin-bottom: 0.25rem;
+}
+
+.event-desc {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Pushes button to bottom */
+}
+
+.btn-register {
+    width: 100%;
+    background-color: var(--text-dark);
+    color: var(--white);
+}
+
+.btn-register:hover {
+    background-color: var(--primary-color);
+}
+
+/* 7. LOADING & ERROR STATES */
+.loading-text, .no-results {
+    grid-column: 1 / -1; /* Spans full width */
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-light);
+    padding: 2rem;
+}
+
+/* 8. MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    
+    .nav-links {
+        display: none; /* Hide standard menu on mobile */
+    }
+    
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: var(--text-dark);
+    }
+    
+    .search-wrapper input {
+        width: 100%;
+    }
+}
+
+/* Add this INSIDE or AFTER your existing media query */
+@media (max-width: 768px) {
+    
+    /* This style applies when JS adds the 'active' class */
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Push it below the navbar */
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        padding: 1rem 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        text-align: center;
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    .nav-links.active li {
+        margin: 1rem 0;
+    }
+
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    background-color: var(--white);
+    padding: 4rem 0;
+    text-align: center;
+    border-top: 1px solid #e5e7eb;
+}
+
+.contact-content h2 {
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.contact-content p {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Wraps nicely on mobile */
+}
+
+/* REPLACE the previous .contact-item styles with this: */
+
+.contact-item {
+    display: flex;
+    align-items: center; /* Vertically center icon with text */
+    gap: 0.8rem;         /* Slightly more space looks cleaner */
+    font-weight: 500;
+}
+
+/* Force both links and paragraphs to behave identically */
+.contact-item p, 
+.contact-item a {
+    margin: 0;           /* CRITICAL: Removes default paragraph spacing */
+    line-height: 1;      /* CRITICAL: Forces text to sit tight in the center */
+    padding-top: 4px;    /* Micro-adjustment: Text usually sits slightly high; this pushes it down to match emoji center */
+}
+
+.contact-item .icon {
+    font-size: 1.5rem;   /* Make icons slightly larger so they act as anchors */
+    line-height: 1;
+}

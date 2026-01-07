@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find the best local events in Islamabad.">
+    <title>Dynamics 360 | Featured Events</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Dynamics<span>Events</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Discover Events Near You</h1>
+            <p>Join the community and experience the best of Islamabad.</p>
+            <a href="#events" class="btn btn-primary">Browse Events</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="events" class="events-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Events</h2>
+                    
+                    <div class="search-wrapper">
+                        <input type="text" id="search-input" placeholder="Search events by name...">
+                    </div>
+                </div>
+
+                <div id="events-grid" class="events-grid">
+                    <p class="loading-text">Loading events...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Get in Touch</h2>
+                <p>Have questions? We'd love to hear from you.</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="icon">📧</span>
+                        <a href="mailto:hr@dynamics360.net">hr@dynamics360.net</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📍</span>
+                        <p>Gulberg Greens, Islamabad</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📱</span>
+                        <p>+92 339 411 1994</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>
