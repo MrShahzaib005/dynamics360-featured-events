@@ -2,7 +2,7 @@
 
 I developed a responsive, single-page application (SPA) designed to help users discover local events. This project was built as part of the Web Development Internship selection process for Dynamics 360.
 
-**Live Preview:** [INSERT YOUR VERCEL LINK HERE]
+**Live Preview:** https://vercel.com/muhammad-shahzaibs-projects-54a4ab36/dynamics360-featured-events/2VeYFDJ4s8LJNhc7iKhRRvV41DQp
 
 ## Features
 
